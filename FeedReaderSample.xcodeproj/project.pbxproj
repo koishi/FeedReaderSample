@@ -142,7 +142,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		43D3E82B1B6A2ADD00438399 /* MWFeedarser */ = {
+		43D3E82B1B6A2ADD00438399 /* MWFeedParser */ = {
 			isa = PBXGroup;
 			children = (
 				43D3E82E1B6A2AEA00438399 /* MWFeedInfo.h */,
@@ -153,7 +153,7 @@
 				43D3E8331B6A2AEA00438399 /* MWFeedParser.h */,
 				43D3E8341B6A2AEA00438399 /* MWFeedParser.m */,
 			);
-			name = MWFeedarser;
+			name = MWFeedParser;
 			sourceTree = "<group>";
 		};
 		43D3E8421B6A2B0000438399 /* Categories */ = {
@@ -174,7 +174,7 @@
 		43D3E8431B6A2B0E00438399 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				43D3E82B1B6A2ADD00438399 /* MWFeedarser */,
+				43D3E82B1B6A2ADD00438399 /* MWFeedParser */,
 				43D3E8421B6A2B0000438399 /* Categories */,
 			);
 			name = Classes;
