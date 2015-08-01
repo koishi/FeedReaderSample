@@ -21,6 +21,7 @@
 		43D3E83F1B6A2AEA00438399 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E8361B6A2AEA00438399 /* NSDate+InternetDateTime.m */; };
 		43D3E8401B6A2AEA00438399 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E8381B6A2AEA00438399 /* NSString+HTML.m */; };
 		43D3E8411B6A2AEA00438399 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E83A1B6A2AEA00438399 /* NSString+XMLEntities.m */; };
+		43D3E8461B6A3B7200438399 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E8451B6A3B7200438399 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		43D3E8381B6A2AEA00438399 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		43D3E8391B6A2AEA00438399 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
 		43D3E83A1B6A2AEA00438399 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		43D3E8441B6A3B7200438399 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		43D3E8451B6A3B7200438399 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				43D3E8121B6A2A5C00438399 /* Images.xcassets */,
 				43D3E8141B6A2A5C00438399 /* LaunchScreen.xib */,
 				43D3E8051B6A2A5C00438399 /* Supporting Files */,
+				43D3E8441B6A3B7200438399 /* TableViewController.h */,
+				43D3E8451B6A3B7200438399 /* TableViewController.m */,
 			);
 			path = FeedReaderSample;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D3E8461B6A3B7200438399 /* TableViewController.m in Sources */,
 				43D3E83D1B6A2AEA00438399 /* MWFeedItem.m in Sources */,
 				43D3E80E1B6A2A5C00438399 /* ViewController.m in Sources */,
 				43D3E8411B6A2AEA00438399 /* NSString+XMLEntities.m in Sources */,
@@ -486,6 +492,7 @@
 				43D3E8271B6A2A5C00438399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43D3E8281B6A2A5C00438399 /* Build configuration list for PBXNativeTarget "FeedReaderSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				43D3E82A1B6A2A5C00438399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
