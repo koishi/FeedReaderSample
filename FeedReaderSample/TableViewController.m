@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "MWFeedParser.h"
+#import "WebViewController.h"
 
 @interface TableViewController ()
 
@@ -90,6 +91,15 @@
   self.tableView.userInteractionEnabled = YES;
   self.tableView.alpha = 1;
   [self.tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"selectRow"]) {
+    MWFeedItem *item = itemsToDisplay[[self.tableView indexPathForSelectedRow].row];
+    WebViewController *webVC = [segue destinationViewController];
+    webVC.URL = item.link;
+  }
 }
 
 /*

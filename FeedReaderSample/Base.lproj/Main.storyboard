@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pAZ-fb-E95">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -19,7 +20,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="SQ4-Vy-kmE" kind="show" id="iYH-bC-oPL"/>
+                                    <segue destination="SQ4-Vy-kmE" kind="show" identifier="selectRow" id="iYH-bC-oPL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -34,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="312" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="ZdY-6w-2Hl">
             <objects>
-                <viewController id="SQ4-Vy-kmE" sceneMemberID="viewController">
+                <viewController id="SQ4-Vy-kmE" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ED-bs-yLU"/>
                         <viewControllerLayoutGuide type="bottom" id="l9A-2E-IHK"/>
@@ -46,14 +47,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-bq-3n8">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-bq-3n8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5fT-bq-3n8" firstAttribute="top" secondItem="Pv5-Gi-Diz" secondAttribute="topMargin" id="9CS-NH-yP7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5fT-bq-3n8" secondAttribute="trailing" constant="-16" id="GYt-34-Zcg"/>
+                            <constraint firstItem="l9A-2E-IHK" firstAttribute="top" secondItem="5fT-bq-3n8" secondAttribute="bottom" id="ega-yL-fac"/>
+                            <constraint firstItem="5fT-bq-3n8" firstAttribute="leading" secondItem="Pv5-Gi-Diz" secondAttribute="leadingMargin" constant="-16" id="tfS-3H-Tjv"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="5fT-bq-3n8" id="lRg-IJ-l8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIG-jl-8sE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
