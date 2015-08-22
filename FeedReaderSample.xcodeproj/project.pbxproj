@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		43D3E8081B6A2A5C00438399 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E8071B6A2A5C00438399 /* main.m */; };
 		43D3E80B1B6A2A5C00438399 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E80A1B6A2A5C00438399 /* AppDelegate.m */; };
-		43D3E80E1B6A2A5C00438399 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3E80D1B6A2A5C00438399 /* ViewController.m */; };
 		43D3E8111B6A2A5C00438399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D3E80F1B6A2A5C00438399 /* Main.storyboard */; };
 		43D3E8131B6A2A5C00438399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D3E8121B6A2A5C00438399 /* Images.xcassets */; };
 		43D3E8161B6A2A5C00438399 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D3E8141B6A2A5C00438399 /* LaunchScreen.xib */; };
@@ -41,8 +40,6 @@
 		43D3E8071B6A2A5C00438399 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43D3E8091B6A2A5C00438399 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43D3E80A1B6A2A5C00438399 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		43D3E80C1B6A2A5C00438399 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		43D3E80D1B6A2A5C00438399 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43D3E8101B6A2A5C00438399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43D3E8121B6A2A5C00438399 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43D3E8151B6A2A5C00438399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,6 +85,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431E21771B88122500F1AB1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43D3E80F1B6A2A5C00438399 /* Main.storyboard */,
+				43D3E8141B6A2A5C00438399 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		431E21781B88124600F1AB1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43D3E8441B6A3B7200438399 /* TableViewController.h */,
+				43D3E8451B6A3B7200438399 /* TableViewController.m */,
+				43F464C11B6D6F5400720914 /* WebViewController.h */,
+				43F464C21B6D6F5400720914 /* WebViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		43D3E7F91B6A2A5B00438399 = {
 			isa = PBXGroup;
 			children = (
@@ -112,16 +129,8 @@
 				43D3E8431B6A2B0E00438399 /* Classes */,
 				43D3E8091B6A2A5C00438399 /* AppDelegate.h */,
 				43D3E80A1B6A2A5C00438399 /* AppDelegate.m */,
-				43D3E80C1B6A2A5C00438399 /* ViewController.h */,
-				43D3E80D1B6A2A5C00438399 /* ViewController.m */,
-				43D3E80F1B6A2A5C00438399 /* Main.storyboard */,
 				43D3E8121B6A2A5C00438399 /* Images.xcassets */,
-				43D3E8141B6A2A5C00438399 /* LaunchScreen.xib */,
 				43D3E8051B6A2A5C00438399 /* Supporting Files */,
-				43D3E8441B6A3B7200438399 /* TableViewController.h */,
-				43D3E8451B6A3B7200438399 /* TableViewController.m */,
-				43F464C11B6D6F5400720914 /* WebViewController.h */,
-				43F464C21B6D6F5400720914 /* WebViewController.m */,
 			);
 			path = FeedReaderSample;
 			sourceTree = "<group>";
@@ -184,6 +193,8 @@
 		43D3E8431B6A2B0E00438399 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				431E21781B88124600F1AB1E /* Controllers */,
+				431E21771B88122500F1AB1E /* Views */,
 				43D3E82B1B6A2ADD00438399 /* MWFeedParser */,
 				43D3E8421B6A2B0000438399 /* Categories */,
 			);
@@ -292,7 +303,6 @@
 			files = (
 				43D3E8461B6A3B7200438399 /* TableViewController.m in Sources */,
 				43D3E83D1B6A2AEA00438399 /* MWFeedItem.m in Sources */,
-				43D3E80E1B6A2A5C00438399 /* ViewController.m in Sources */,
 				43D3E8411B6A2AEA00438399 /* NSString+XMLEntities.m in Sources */,
 				43D3E83E1B6A2AEA00438399 /* MWFeedParser.m in Sources */,
 				43D3E83B1B6A2AEA00438399 /* GTMNSString+HTML.m in Sources */,
