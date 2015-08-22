@@ -14,6 +14,8 @@
 
 @end
 
+static NSString *const kRSSFeedURLString = @"http://www.oreilly.co.jp/catalog/soon.xml";
+
 @implementation TableViewController
 
 #pragma mark - LifeCycle
@@ -26,7 +28,7 @@
   itemsToDisplay = [[NSArray array] init];
   
   // 最初の
-  NSURL *feedURL = [NSURL URLWithString:@"http://www.oreilly.co.jp/catalog/soon.xml"];
+  NSURL *feedURL = [NSURL URLWithString:kRSSFeedURLString];
   feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
   feedParser.delegate = self;
   feedParser.feedParseType = ParseTypeFull;
