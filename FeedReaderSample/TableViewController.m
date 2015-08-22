@@ -16,6 +16,8 @@
 
 @implementation TableViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
   
@@ -38,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -54,16 +56,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-  
-//  cell.textLabel.text = @"test";
- 
+
   MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
-  cell.textLabel.text = item.title;
-  
+  cell.textLabel.text = item.title;  
   
   return cell;
 }
 
+# pragma mark - MWFeedParserDelegate
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
 
@@ -92,6 +92,8 @@
   self.tableView.alpha = 1;
   [self.tableView reloadData];
 }
+
+# pragma mark - Event
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
