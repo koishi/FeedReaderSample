@@ -14,7 +14,7 @@
 
 @end
 
-static NSString *const kRSSFeedURLString = @"http://www.oreilly.co.jp/catalog/soon.xml";
+static NSString *const kRSSFeedURLString = @"http://b.hatena.ne.jp/megomego/rss";
 
 @implementation TableViewController
 
@@ -52,11 +52,13 @@ static NSString *const kRSSFeedURLString = @"http://www.oreilly.co.jp/catalog/so
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
-  MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
+  MWFeedItem *item = itemsToDisplay[indexPath.row];
   cell.textLabel.text = item.title;
-  
+
+  NSLog(@"%@",[item images]);
+
   return cell;
 }
 

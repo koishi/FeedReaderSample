@@ -76,4 +76,29 @@
 	if (enclosures) [encoder encodeObject:enclosures forKey:@"enclosures"];
 }
 
+- (NSArray *)images {
+
+    NSString *text = self.content;
+    if (!text){
+        if (!self.summary){
+            return nil;
+        }
+        text = self.summary;
+    }
+
+    NSMutableArray *results = [NSMutableArray new];
+    NSString* pattern = @"(<img.*?src=\\\")(.*?)(\\\".*?>)";
+
+    NSError* error = nil;
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+
+    if (error == nil){
+        NSArray *matches = [regex matchesInString:text options:0 range:NSMakeRange(0, text.length)];
+        for (NSTextCheckingResult *match in matches){
+            [results addObject:[text substringWithRange:[match rangeAtIndex:2]]];
+        }
+    }
+    return results;
+}
+
 @end
